@@ -19,27 +19,9 @@ To get started with JetRacer, follow these steps
 
 1. Download Jetson Nano Developer Kit SD Card Image (version: 4.5) from [this link](https://developer.nvidia.com/embedded/downloads).
 
-2. Follow [these instructions](https://developer.nvidia.com/embedded/learn/get-started-jetson-nano-devkit).
-    > Create:</br>
-    > *username* as **jetson**</br>
-    > *password* as **jetson**</br>
-    > *computer name* as **jetson**
+2. Follow [these instructions](https://developer.nvidia.com/embedded/learn/get-started-jetson-nano-devkit) to install SD Card Image on Jetson Nano.
 
-3. Run the following script in the jetson nano terminal to install
-
-    - A Jupyter Lab server that starts on boot for easy web programming.
-    - A script to display the Jetson's IP address (and other stats).
-    - The popular deep learning frameworks PyTorch and TensorFlow.
-
-    ```bash
-    cd
-    sudo apt-get update
-    git clone https://github.com/harsha-vk/nvidia_jetracer.git
-    cd ~/nvidia_jetracer/jetcard/
-    chmod +x install.sh
-    ./install.sh
-    ```
-    > Shutdown and Restart jetson nano for the above changes to take place.
+3. Build Jetson-Inference from source by following this [link](https://github.com/dusty-nv/jetson-inference/blob/master/docs/building-repo-2.md).
 
 4. Install ROS2 Eloquent Elusor Desktop by following instructions below.
 
