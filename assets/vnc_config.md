@@ -20,22 +20,30 @@
     </key>
     ```
 
-3. Save and close the file. Now compile the file.
+3. Save and close the file. Next, compile the file.
 
     ```bash
     sudo glib-compile-schemas /usr/share/glib-2.0/schemas
     ```
 
-4. Open Startup Applications Preferences and add VNC to the list.
+4. Now open **Desktop Sharing** app.
+    
+    - Tick *Allow other users to view your desktop* and *Allow other users to control your desktop*.
+    - Untick *You must confirm each access to this machine*.
+    - Tick *Require the user to enter this password* and enter a password for the VNC session.
+
+5. Open **Startup Applications Preferences** and add VNC to the list.
 
     - Click Add.
     - Type Name as ***Vino***
     - Type Command as ***/usr/lib/vino/vino-server***
     - Click Save.
 
-5. Open terminal and run the following commands.
+6. Open terminal and run the following commands.
 
     ```bash
     gsettings set org.gnome.Vino require-encryption false
     gsettings set org.gnome.Vino prompt-enabled false
     ```
+
+7. Enable auto-login and disable Lock Screen from settings.

@@ -15,11 +15,21 @@ find_package(ament_cmake REQUIRED)
 find_package(ament_cmake_python REQUIRED)
 find_package(rclcpp REQUIRED)
 find_package(rclpy REQUIRED)
+find_package(std_msgs REQUIRED)
+find_package(sensor_msgs REQUIRED)
+find_package(cv_bridge REQUIRED)
+find_package(rcl_interfaces REQUIRED)
+find_package(rosidl_default_generators REQUIRED)
 
-# Install Python modules
+# Install Custom Messages
+rosidl_generate_interfaces(${PROJECT_NAME}
+  "msg/LaneGeometry.msg"
+)
+
+# Install Python Modules
 ament_python_install_package(${PROJECT_NAME})
 
-# Install Python executables
+# Install Python Executables
 install(PROGRAMS
   scripts/image_processor.py
   DESTINATION lib/${PROJECT_NAME}
