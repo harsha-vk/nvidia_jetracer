@@ -248,7 +248,7 @@ class LaneDetection(Node):
         
         self.fit_poly(leftx, lefty, rightx, righty)
 
-    def searchAroundPoly(img):
+    def searchAroundPoly(self,img):
         nonzero = img.nonzero()
         nonzeroy = np.array(nonzero[0])
         nonzerox = np.array(nonzero[1])
